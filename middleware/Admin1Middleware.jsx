@@ -2,13 +2,17 @@
 import { useEffect, useState } from "react";
 import { useSession } from "@/utils/SessionContext";
 import { useRouter } from "next/navigation";
+import Page403 from "@/pages/Page403";
+import LoadingPage from "@/pages/LoadingPage";
 
 
 const Admin1Middleware = ({children}) => {
   const [akses, setAkses] = useState(false);
   const router = useRouter();
   const {user} = useSession();
-  
+  const [loading, setLoading] = useState(true);
+
+
   if(typeof window !== 'undefined'){
     let userData = sessionStorage.getItem("_access");
     
@@ -24,6 +28,7 @@ const Admin1Middleware = ({children}) => {
         if(userAkses === 2 || userAkses === 3){
           setAkses(true);
         }
+        setLoading(false);
       });
     }
   }
@@ -37,7 +42,7 @@ const Admin1Middleware = ({children}) => {
   }else{
     return (
       <>
-        AKSES DIBATASI
+        { loading ? <LoadingPage /> :  <Page403 />}
       </>
     )
   }

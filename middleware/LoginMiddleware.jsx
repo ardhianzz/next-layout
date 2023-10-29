@@ -23,7 +23,7 @@ const LoginMiddleware = ({children}) => {
       useEffect(() => {
         if(user){
           setLoading(false);
-          router.push(process.env.NEXT_PUBLIC_APP+"/main");
+          // router.push(process.env.NEXT_PUBLIC_APP+"/main");
         }
       });
     }
