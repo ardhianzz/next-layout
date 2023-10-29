@@ -1,20 +1,23 @@
 'use client';
 
+import Link from "next/link"
 import { useState } from "react";
 import Header from "./web/Header";
 import Footer from "./web/Footer";
 import SideBar from "./web/SideBar";
-
+import LoginMiddleware from "@/middleware/LoginMiddleware";
 
 export default function Layout({ children }) {
   const [menu, setMenu] = useState(false);
+
   const menuHide = () =>{
     setMenu(!menu);
   }
 
   return (
     <>  
-        <Header menuHide={menuHide} />
+      <LoginMiddleware>
+        <Header actionHidden={menuHide} />
         <div className="bg-slate-100 h-screen pt-16">
             <div className="flex h-full w-full">
                 <SideBar menuStatus={menu} />
@@ -24,6 +27,7 @@ export default function Layout({ children }) {
             </div>
         </div>
         <Footer />
+      </LoginMiddleware>
     </>
   )
 }

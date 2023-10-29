@@ -14,6 +14,7 @@ const UserPage = () => {
     }
   return (
    <>
+    USER PAGE 
     <Modals status={modals} hideModal={modalsHide}>
         <ModalCek1 />
     </Modals>

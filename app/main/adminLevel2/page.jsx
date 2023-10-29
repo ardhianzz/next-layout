@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import Modals from "../web/Modals";
-import ModalCek2 from "../web/modals/ModalCek2";
+import ModalCek1 from "../web/modals/ModalCek1";
 
 
-const HrdPage = () => {
+const AdminLevel2 = () => {
 
 
     const [modals, setModals] = useState(false);
@@ -15,11 +15,11 @@ const HrdPage = () => {
   return (
    <>
     <Modals status={modals} hideModal={modalsHide}>
-        <ModalCek2 />
+        <ModalCek1 />
     </Modals>
     <button className="p-2 m-2 bg-slate-300 rounded-lg" onClick={modalsHide}>HRD User</button>
    </>
   )
 }
 
-export default HrdPage
+export default AdminLevel2
