@@ -48,13 +48,19 @@ const MainPage = () => {
   
 
   return (
-    <div className='flex justify-center items-center w-screen h-screen bg-slate-50'>
-      <div className=''>
-        <h1 className='text-3xl mb-12'>Hallo, silahkan pilih : </h1>
+    <div className='flex justify-center items-center w-screen h-screen bg-slate-50 gap-5'>
+      <div className='border p-8 w-96 h-72 bg-slate-100 hover:drop-shadow-lg rounded-md drop-shadow-sm'>
+        <h1 className='text-3xl mb-12'>Custom Login : </h1>
         <div className='block justify-center'>
           <div onClick={loginUser} className='bg-blue-800 cursor-pointer w-36 mx-auto my-2 p-2 rounded-md hover:bg-blue-400 text-center text-blue-50'>User</div>
           <div onClick={loginAdmin1} className='bg-blue-800 cursor-pointer w-36 mx-auto my-2 p-2 rounded-md hover:bg-blue-400 text-center text-blue-50'>Admin Level 1</div>
           <div onClick={loginAdmin2} className='bg-blue-800 cursor-pointer w-36 mx-auto my-2 p-2 rounded-md hover:bg-blue-400 text-center text-blue-50'>Admin Level 2</div>
+        </div>
+      </div>
+      <div className='border p-8 w-96 h-72 bg-slate-100 hover:drop-shadow-lg rounded-md drop-shadow-sm'>
+        <h1 className='text-3xl mb-12'>Next Auth Login : </h1>
+        <div className='block justify-center'>
+          <div className='bg-blue-800 cursor-pointer w-36 mx-auto my-2 p-2 rounded-md hover:bg-blue-400 text-center text-blue-50'>Login</div>
         </div>
       </div>
     </div>
