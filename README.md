@@ -14,16 +14,33 @@ NUR ARDHIANSYAH
 #
 # KONFIGURASI
 #
-
 git clone https://github.com/ardhianzz/next-layout-starter.git
 cd ./next-layout-starter
+
+
 
 #
 # INSTALLASI
 #
 npm install
-
 OR
-
 yarn install
 
+
+
+#
+# ENV 
+#
+buat file dengan nama .env.local
+isikan parameter berikut :
+NEXT_PUBLIC_APP=http://localhost:3000
+NEXT_PUBLIC_SECRET=ini_password_rahasia
+
+
+
+
+#
+# MENJALANKAN SERVER
+#
+
+npm run dev
